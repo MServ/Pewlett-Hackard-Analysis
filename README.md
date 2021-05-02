@@ -25,6 +25,9 @@ Given that there are 90398 employees expected to retire and 1549 employees who a
 Based on department, there are x employees from y department that are expected to retire soon. 
 
 
+% managers retiring vs total
+
+
 Overview of the analysis: Explain the purpose of this analysis.
 
 Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
