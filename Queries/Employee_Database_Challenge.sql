@@ -49,3 +49,41 @@ ON (e.emp_no = ti.emp_no)
 WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (de.to_date = ('9999-01-01'))
 ORDER BY e.emp_no;
+
+
+-- Deliverable 3:
+-- query for retiring employees by department.
+SELECT COUNT(ce.emp_no), de.dept_no, d.dept_name
+-- INTO emp_per_dept
+FROM current_emp as ce
+LEFT JOIN dept_emp as de
+ON ce.emp_no = de.emp_no
+LEFT JOIN departments as d
+ON de.dept_no = d.dept_no
+LEFT JOIN employees as e
+ON ce.emp_no = e.emp_no
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (de.to_date = ('9999-01-01'))
+GROUP BY de.dept_no, d.dept_name
+ORDER BY de.dept_no;
+
+--  query for all employees by department
+SELECT COUNT(e.emp_no), de.dept_no, d.dept_name
+-- INTO emp_per_dept
+FROM employees as e
+LEFT JOIN dept_emp as de
+ON e.emp_no = de.emp_no
+LEFT JOIN departments as d
+ON de.dept_no = d.dept_no
+WHERE (de.to_date = ('9999-01-01'))
+GROUP BY de.dept_no, d.dept_name
+ORDER BY de.dept_no;
+
+-- query for total number of managers
+SELECT COUNT(dm.emp_no) as managers, d.dept_name
+-- INTO total_managers
+FROM dept_manager as dm
+LEFT JOIN departments as d
+ON dm.dept_no = d.dept_no
+GROUP BY d.dept_no
+ORDER BY d.dept_no
