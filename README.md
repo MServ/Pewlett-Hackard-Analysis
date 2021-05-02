@@ -22,6 +22,7 @@ There are 90398 employees who are expected to retire in the near future.
 Given that there are 90398 employees expected to retire and 1549 employees who are eligible for mentorship, this means there are at least 58 new employees per available mentor. This is only if all potential mentors wish to actually become mentors to new employees. If, for example, only half wished to, then there would be 116 new employees per mentor. This means that there are likely to be far too few mentors available for the following employees.
 
 
+Based on department, there are x employees from y department that are expected to retire soon. 
 
 
 Overview of the analysis: Explain the purpose of this analysis.
